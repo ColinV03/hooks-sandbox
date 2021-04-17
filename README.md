@@ -1,3 +1,12 @@
+# Hooks Sandbox
+
+This page is to serve as practice while I am learning the fundamentals of React's Hooks features. Checking out some cool features along the way! 
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
