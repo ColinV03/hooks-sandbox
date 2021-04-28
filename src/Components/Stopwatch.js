@@ -12,27 +12,36 @@ export default function Stopwatch() {
 
         useEffect(() => {
             let intervalId;
+            //boolean check for a start
             if (isActive) {
+                //set variable to the setInterval method. 
                 intervalId = setInterval(() => {
+                    
                     
                     const secondCounter = counter % 60;
                     const minuteCounter = Math.floor(counter / 60)
 
+                    //boolean check for double digit value, if length is longer than a digit, then the double digit appears
 
                     const computedSecond = String(secondCounter).length === 1 ? `0${secondCounter}` : secondCounter;
                     const computedMinute = String(minuteCounter).length === 1 ? `0${minuteCounter}` : minuteCounter;
                 
-
+                    //CALL THE HOOKS!, update the value with the string of the current time. 
                     setseconds(computedSecond);
                     setminutes(computedMinute);
 
+                    //count that! 
                     setcounter(counter => counter + 1);
                 }, 1000)
 
                 return () => clearInterval(intervalId);
             }
+            // only runs when one of two things happen: isActive changes, or the counter changes.
+
         }, [isActive, counter])
-            
+    
+    s
+            //reset variables in state
         const  stopTimer = () => {
                 setisActive(false);
                 setcounter(0);
