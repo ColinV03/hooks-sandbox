@@ -40,7 +40,7 @@ export default function Stopwatch() {
 
         }, [isActive, counter])
     
-    s
+    
             //reset variables in state
         const  stopTimer = () => {
                 setisActive(false);
