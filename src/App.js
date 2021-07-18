@@ -2,28 +2,30 @@
 import './App.css';
 // import Counter from "./Components/Counter";
 // import Stopwatch from "./Components/Stopwatch"
-// import FetchPokemon from "./Components/FetchPokemon"
+import FetchPokemon from "./Components/FetchPokemon"
+// import FetchUser from "./Components/FetchUser"
+
+// import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+
+// const client = new ApolloClient({
+//   uri: "https://swapi-graphql.netlify.app/.netlify/functions/index",
+//   cache: new InMemoryCache(),
+// });
 
 
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-const client = new ApolloClient({
-  uri: "https://48p1r2roz4.sse.codesandbox.io",
-  cache: new InMemoryCache(),
-});
-
-
-
-client
-  .query({
-    query: gql`
-      query GetRates {
-        rates(currency: "USD"){
-          currency
-        }
-      }
-      `
-  }).then(result => console.log(result))
+// client
+//   .query({
+//     query: gql`
+//       Root($personId: 1) {
+//       person(id: $personId) {
+//        name
+//        id
+//      }
+//     }
+//     `,
+//   })
+//   .then((result) => console.log(result));
 
 
 
@@ -48,10 +50,11 @@ client
 
 
 function App() {
+  
   return(
   <div>
-    <p> Page Working</p>
-  
+      {/* <FetchUser/> */}
+      <FetchPokemon/>
   
     </div>
     
